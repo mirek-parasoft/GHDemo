@@ -46,7 +46,7 @@ struct timer_record* query_user()
     tm_tmp = localtime(&timer);
     
     the_record = (struct timer_record*)malloc(sizeof(struct timer_record));
-    memset(the_record, 0, sizeof(struct timer_record));   
+    memset(the_record, 0, sizeof(struct timer_record));    /* parasoft-suppress BD-PB-NP "Accepteble basing on PERMIT_XYZ" */
     
     /* starttime */
     print_string("Please enter the start hour [0-23] > ");
@@ -129,11 +129,11 @@ void format_timer_record(int idx, char* buf)
     char end[BUF_SIZE];
     
     struct timer_record* tr = timer_records[idx];
-
+    if (tr) {
     strftime(start, BUF_SIZE, "%I:%M %p", localtime(&tr->starttime));
     strftime(end, BUF_SIZE, "%I:%M %p", localtime(&tr->endtime));
 
-    if (tr) {
+
         sprintf(buf, "%d\t%s\t%s\t%d\n", idx+1, start, end, tr->channel);
     }
     
