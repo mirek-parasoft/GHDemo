@@ -70,7 +70,7 @@ int main()
 {
     init_timer();     /* setup */
     main_loop();      /* loop until user quits */
-    uninit_timer();   /* tear down */
+    uninit_timer();   /* tear down operation */
     return 0;
 }
 
