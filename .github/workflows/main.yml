@@ -33,7 +33,7 @@ jobs:
 
     # Builds your CMake project. (This step is optional, as it is not required for code analysis).
     - name: Build project (optional)
-      run: cmake --build build
+      run: cpptesttrace cmake --build build
 
     # Runs code analysis with C/C++test.
     - name: Run C/C++test
@@ -43,9 +43,9 @@ jobs:
       with:
         # For CMake-based projects, use a compile_commands.json file as the input for analysis. 
         input: build/compile_commands.json
-        compilerConfig: gcc_10-64
-        testConfig: MyLocalConfig.properties
-        additionalParams: -fail
+        commandLinePattern: '${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
+        additionalParams: '-localsettings config.properties'
+        installDir: /home/demo-user/Parasoft/cpptest-pro/cpptest
 
         # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
         # reportFormat: xml,html,custom
