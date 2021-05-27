@@ -11,7 +11,7 @@
 #include <stdlib.h>
 
 /*
- * Grabs input from stdin
+ * Grabs input from stdin 
  */
 int get_input_digit()
 {
