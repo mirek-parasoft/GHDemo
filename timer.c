@@ -47,6 +47,7 @@ struct timer_record* query_user()
     
     the_record = (struct timer_record*)malloc(sizeof(struct timer_record));
     memset(the_record, 0, sizeof(struct timer_record)); 
+    memset(the_record, 0, sizeof(struct timer_record)); 
     
     /* starttime */
     print_string("Please enter the start hour [0-23] > ");
