@@ -33,7 +33,7 @@ jobs:
 
     # Builds your CMake project. (This step is optional, as it is not required for code analysis).
     - name: Build project (optional)
-      run: bin/cpptesttrace cmake --build build
+      run: cpptesttrace cmake --build build
 
     # Runs code analysis with C/C++test.
     - name: Run C/C++test
