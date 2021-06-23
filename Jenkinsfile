@@ -4,9 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building stage' 
-                sh 'mkdir build && cd build'
-                sh 'cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..'
-                sh 'make'
+                sh 'mkdir build && cd build && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON .. && make'
             }
         }
         stage('Test') {
