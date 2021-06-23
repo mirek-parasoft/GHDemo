@@ -9,15 +9,11 @@ pipeline {
                 sh 'make'
             }
         }
-    }
-    stages {
         stage('Test') {
             steps {
                 echo 'Testing stage' 
             }
         }
-    }
-    stages {
         stage('Archive stage') {
             steps {
                 echo 'Hello world!' 
