@@ -16,7 +16,7 @@ pipeline {
         stage('Archive stage') {
             steps {
                 echo 'Hello world!' 
-                step(\[$class: 'ParasoftPublisher', useReportPattern: true, reportPattern: 'reports/report.xml', settings: ''\])
+                step([$class: 'ParasoftPublisher', useReportPattern: true, reportPattern: 'reports/report.xml', settings: ''])
             }
         }
     }
