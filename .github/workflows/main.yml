@@ -43,6 +43,7 @@ jobs:
       with:
         # For CMake-based projects, use a compile_commands.json file as the input for analysis. 
         input: build/compile_commands.json
+        commandLinePattern: '${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
         compilerConfig: gcc_10-64
         testConfig: "builtin://MISRA C 2012"
         additionalParams: -fail
