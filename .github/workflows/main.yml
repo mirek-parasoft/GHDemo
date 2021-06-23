@@ -47,6 +47,7 @@ jobs:
         compilerConfig: gcc_10-64
         testConfig: "builtin://MISRA C 2012"
         additionalParams: -fail
+        installDir: /home/demo-user/Parasoft/cpptest-pro/cpptest
         # Uncomment if you are using C/C++test 2020.2 to generate a SARIF report:
         # reportFormat: xml,html,custom
         # additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
