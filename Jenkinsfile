@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Archive stage') {
             steps {
-                echo 'Hello world!'
+                echo 'Archiving results'
             }
         }
     }
